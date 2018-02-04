@@ -12,4 +12,8 @@ module.exports = function(server) {
 
   const billingSummaryService = require('../api/billingSummary/billingSummaryService')
   router.route('/billingSummary').get(billingSummaryService.getSummary)
+
+  const UserService = require('../api/Users/UserService')
+  UserService.register(router, '/user')
+
 }
