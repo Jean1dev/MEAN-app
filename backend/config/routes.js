@@ -14,6 +14,6 @@ module.exports = function(server) {
   router.route('/billingSummary').get(billingSummaryService.getSummary)
 
   const UserService = require('../api/Users/UserService')
-  UserService.register(router, '/user')
+  UserService.register(router, '/users')
 
 }

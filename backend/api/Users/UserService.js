@@ -29,7 +29,8 @@ user.route('post', function(req, res){
   var dadosReceiv = req.body
   var senha_crypto = crypto.createHash('md5').update(dadosReceiv.password).digest('hex')
   dadosReceiv.password = senha_crypto
-  __DAO__.insert(dadosReceiv)
+  console.log(dadosReceiv)
+  __DAO__.insert(dadosReceiv, res)
 })
 
   module.exports = user

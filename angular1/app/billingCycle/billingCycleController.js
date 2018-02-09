@@ -16,12 +16,12 @@
             $http.get(`${url}/?skip=${(page - 1) * 10}&limit=10`).then(function(response){
                 obj.billingCycle = { credits: [{}], debts: [{}] }
                 obj.billingCycles = response.data
-                tabs.show(obj, {tabList: true, tabCreate: true})
                 obj.calculateValues()
 
                 $http.get(`${url}/count`).then(function(response){
                     obj.pages = Math.ceil(response.data.value / 10)
                     console.log('pages = ', obj.pages)
+                    tabs.show(obj, {tabList: true, tabCreate: true})
                 })
             })
         }

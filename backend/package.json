@@ -22,6 +22,7 @@
     "express": "^4.14.0",
     "express-query-int": "^1.0.1",
     "lodash": "^4.17.2",
+    "mongodb": "^2.2.29",
     "mongoose": "^4.7.0",
     "mongoose-paginate": "^5.0.3",
     "node-restful": "^0.2.5",
