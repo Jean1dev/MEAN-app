@@ -15,6 +15,10 @@ angular.module('primeiraApp').config([
         url: '/login',
         templateUrl: 'login/login.html'
       })
+      .state('grafico',{
+        url: '/grafico',
+        templateUrl: 'grafico/grafico.html'
+      })
       $urlRouterProvider.otherwise('/dashboard')
   }])
   
