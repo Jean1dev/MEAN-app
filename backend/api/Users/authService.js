@@ -5,7 +5,8 @@ const User = require('./user')
 const env = require('../../.env')
 
 const emailRegex = /\S+@\S+\.\S+/        //EXPRESSÃO REGULAR PARA VALIDAR EMAIL E SENHA
-const passwordRegex = /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,12})/
+//const passwordRegex = /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,12})/ VALIDA SENHA NIVEL HARD
+const passwordRegex = /((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12})/
 
 const sendErrorsFromDB = (res, dbErrors) => {
     const errors = []

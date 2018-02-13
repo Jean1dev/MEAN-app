@@ -4,6 +4,7 @@ angular.module('primeiraApp').constant('consts', {
     owner: 'Jean',
     year: '2017',
     site: 'null',
+    apiLocal: 'http://localhost:3003/api/billingCycles',
     apiUrl: 'http://localhost:3003/api',
     oapiUrl: 'http://localhost:3003/oapi',
     userKey: '_chave_'

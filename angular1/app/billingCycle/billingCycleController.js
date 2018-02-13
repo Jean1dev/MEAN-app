@@ -4,12 +4,14 @@
         '$location',
         'msgs',
         'tabs',
+        'consts',
         BillingCycleController
     ])
 
-    function BillingCycleController($http, $location, messages, tabs){
+    function BillingCycleController($http, $location, messages, tabs, consts){
         const obj = this
-        const url = 'http://localhost:3003/api/billingCycles'
+        //const url = 'http://localhost:3003/api/billingCycles'
+        const url = consts.apiUrl + '/billingCycles'
 
         obj.refresh = function(){
             const page = parseInt($location.search().page) || 1
@@ -27,6 +29,8 @@
         }
 
         obj.create = function(){
+            obj.billingCycle.user = JSON.parse(localStorage._chave_).email
+            
             $http.post(url, obj.billingCycle).then(function(response){
                 obj.refresh()
                 messages.addSuccess('Operação salva no banco de dados')
