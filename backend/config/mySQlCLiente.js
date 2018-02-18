@@ -15,7 +15,7 @@ module.exports.dbLocal = function () {
         host: 'localhost',
         user: 'root',
         password: '',
-        database: 'dbteste',
+        database: 'test',
         port: '3306'
     });
 }

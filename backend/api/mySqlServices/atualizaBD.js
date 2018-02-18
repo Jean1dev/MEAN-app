@@ -3,6 +3,7 @@ const db = require('../../config/mySQlCLiente')
 var atualiza = ''
 var indice = 1
 var connection = db.dbLocal()
+//var connection = db.dbProducao()
 
 connection.query('CREATE TABLE IF NOT EXISTS VersaoBD (' +
     ' idVersaoBD INT NOT NULL AUTO_INCREMENT, ' +
@@ -20,6 +21,7 @@ connection.query('CREATE TABLE IF NOT EXISTS VersaoBD (' +
                     for (var i = 1; i < 9999; i++) {
                         try {
                             atualiza = eval('VERSAO_' + i)
+							console.log(atualiza)
                             incrementaVersao()
                             atualiza()
                         } catch (error) {
@@ -42,3 +44,14 @@ function incrementaVersao(param) {
 
 
 //VERSÕES DE BANCO EM ORDER DECRESCENTE
+function VERSAO_1(){
+	console.log('INICIANDO VERSAO_1')
+	var sql = 'CREATE TABLE IF NOT EXISTS teste(id INT NOT NULL AUTO_INCREMENT, info VARCHAR(45), PRIMARY KEY(`id`)) '
+	connection.query(sql, function(err, res){
+		if(res){
+			console.log('success')
+		}else{
+			console.log(err)
+		}
+	})
+}
