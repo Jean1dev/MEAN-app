@@ -2,7 +2,7 @@ const _ = require('lodash')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 const User = require('./user')
-const env = require('../../.env')
+const env = require('../Users/env')
 
 const emailRegex = /\S+@\S+\.\S+/        //EXPRESSÃO REGULAR PARA VALIDAR EMAIL E SENHA
 //const passwordRegex = /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,12})/ VALIDA SENHA NIVEL HARD
