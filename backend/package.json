@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/Jean1dev/MEAN-app#readme",
   "dependencies": {
-    "bcrypt": "^1.0.3",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "express-query-int": "^1.0.1",
