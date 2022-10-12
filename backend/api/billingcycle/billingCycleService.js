@@ -1,5 +1,5 @@
 const _ = require('lodash')
-const BillingCycle = require('./billingCycle')
+const BillingCycle = require('./BillingCycle')
 
 BillingCycle.methods(['get', 'post', 'put', 'delete'])
 BillingCycle.updateOptions({new: true, runValidators: true})

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const url = process.env.MONGOLAB_URI ? process.env.MONGOLAB_URI : 'mongodb://192.168.1.7:27017/db_finance'
+const url = process.env.MONGOLAB_URI ? process.env.MONGOLAB_URI : 'mongodb://localhost:27017/db_finance'
 
 module.exports = mongoose.connect(url, {useMongoClient: true})
 

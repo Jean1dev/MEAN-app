@@ -1,7 +1,7 @@
 const _ = require('lodash')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
-const User = require('./user')
+const User = require('./User')
 const env = require('../Users/env')
 
 const emailRegex = /\S+@\S+\.\S+/        //EXPRESSÃO REGULAR PARA VALIDAR EMAIL E SENHA

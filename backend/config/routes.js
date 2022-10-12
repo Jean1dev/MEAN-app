@@ -22,7 +22,7 @@ module.exports = function (server) {
   // server.use('/api', router)
 
   // rotas da API
-  const billingCycleService = require('../api/billingCycle/billingCycleService')
+  const billingCycleService = require('../api/billingcycle/billingCycleService')
   // billingCycleService.register(router, '/billingCycles') USAR SE FOR PUBLIC
   billingCycleService.register(protectedApi, '/billingCycles')
 
